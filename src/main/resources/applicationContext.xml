@@ -8,21 +8,6 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+    <context:component-scan base-package="by.rom.springcourse"/>
 
-    <bean id="musicBean"
-          class="by.rom.springcourse.ClassicalMusic"
-          init-method="doMyInit"
-          destroy-method="doMyDestroy"
-          factory-method="getClassicalMusic">
-
-    </bean>
-
-    <!--    <bean id="musicPlayer"-->
-    <!--          class="by.rom.springcourse.MusicPlayer"-->
-    <!--            scope="prototype">-->
-    <!--       <property name="music" ref="musicBean"/>-->
-    <!--        <property name="name" value="${musicPlayer.name}"/>-->
-    <!--        <property name="volume" value="${musicPlayer.volume}"/>-->
-    <!--    </bean>-->
 </beans>

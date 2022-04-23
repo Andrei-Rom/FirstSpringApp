@@ -11,6 +11,10 @@ public class MusicPlayer {
     public MusicPlayer() {
     }
 
+    public MusicPlayer(Music music) {
+        this.music = music;
+    }
+
     public String getName() {
         return name;
     }
